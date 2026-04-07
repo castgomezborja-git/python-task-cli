@@ -20,15 +20,22 @@ def save_tasks(tasks):
         json.dump(tasks, file, indent=4)
 
 def add_task(tasks, title):
+    new_id = max([task["id"] for task in tasks], default=0) + 1
+
     task = {
-        "id": len(tasks) + 1,
+        "id": new_id,
         "title": title,
         "completed": False
     }
+
     tasks.append(task)
     return tasks
 
 def list_tasks(tasks):
+    if not tasks:
+        print("No hay tareas aún 📭")
+        return
+
     for task in tasks:
         status = "✅" if task["completed"] else "❌"
         print(f'{task["id"]}. {task["title"]} [{status}]')

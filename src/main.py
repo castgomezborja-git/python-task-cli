@@ -14,10 +14,15 @@ def main():
             list_tasks(tasks)
 
         elif option == "2":
-            title = input("\nTítulo: ")
+            title = input("Título: ").strip()
+
+            if not title:
+                print("❌ El título no puede estar vacío")
+                continue
+
             tasks = add_task(tasks, title)
             save_tasks(tasks)
-            print("\nTarea guardada")
+            print("✅ Tarea añadida correctamente")
 
         elif option == "3":
             break
