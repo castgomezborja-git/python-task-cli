@@ -6,7 +6,7 @@ def main():
     while True:
         print("\n1. Ver tareas")
         print("2. Añadir tarea")
-        print("3. Salir")
+        print("3. Salir\n")
 
         option = input("Elige opción: ")
 
@@ -14,9 +14,10 @@ def main():
             list_tasks(tasks)
 
         elif option == "2":
-            title = input("Título: ")
+            title = input("\nTítulo: ")
             tasks = add_task(tasks, title)
             save_tasks(tasks)
+            print("\nTarea guardada")
 
         elif option == "3":
             break
