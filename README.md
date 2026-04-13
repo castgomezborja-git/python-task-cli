@@ -4,74 +4,72 @@ Aplicación de consola desarrollada en Python para gestionar tareas, como parte 
 
 ---
 
-## 🚀 Funcionalidades (Semana 1)
+## 🚀 Funcionalidades (Semana 2)
 
 - ✅ Añadir tareas
 - ✅ Listar tareas
+- ✅ Marcar tareas como completadas
+- ✅ Eliminar tareas
+- ✅ Editar título de tareas
 - ✅ Persistencia en archivo JSON
-- ❌ Completar tareas (pendiente)
-- ❌ Eliminar tareas (pendiente)
 
 ---
 
 ## 🧠 Qué he aprendido
 
-- Manejo de listas y diccionarios en Python
-- Lectura y escritura de archivos JSON
-- Estructuración básica de un proyecto
-- Separación de lógica en módulos (`main.py` y `tasks.py`)
-- Uso básico de Git y GitHub
+- Implementación de CRUD completo en Python
+- Manipulación de estructuras de datos (listas/diccionarios)
+- Gestión de estado y persistencia con JSON
+- Validación de inputs en CLI
+- Organización modular del código
+- Flujo de trabajo con Git y GitHub
 
 ---
 
 ## 📂 Estructura del proyecto
+
 python-task-cli/
 │
 ├── src/
-│ ├── main.py # Punto de entrada (CLI)
-│ └── tasks.py # Lógica de negocio
+│ ├── main.py # Interfaz CLI
+│ └── tasks.py # Lógica de negocio (CRUD)
 │
 ├── data/
-│ └── tasks.json # Persistencia de datos
+│ └── tasks.json
 │
 ├── tests/ # (pendiente)
 ├── .gitignore
 ├── requirements.txt
 └── README.md
 
+
 ---
 
 ## ▶️ Cómo ejecutar
 
-1. Crear entorno virtual:
-
+```bash
 python -m venv venv
-
-2. Activar entorno:
-
 venv\Scripts\activate
-
-3. Ejecutar aplicación:
-
 python src/main.py
 
-## 📌 Ejemplo de uso
+📌 Ejemplo de uso
 1. Ver tareas
 2. Añadir tarea
-3. Salir
+3. Completar tarea
+4. Eliminar tarea
+5. Editar tarea
+6. Salir
 
-## 🔄 Estado del proyecto
+🔄 Estado del proyecto
 
-🟡 En desarrollo — Semana 1 completada
+    🟢 Semana 2 completada — CRUD funcional
 
-## 📅 Próximos pasos (Semana 2)
+📅 Próximos pasos (Semana 3)
+    Refactorizar estructura del proyecto
+    Separar lógica de presentación
+    Introducir testing básico
+    Preparar base para API (FastAPI)
 
-- Modificar el nombre de la tarea
+👨‍💻 Autor
 
-- Marcar tareas como completadas
-
-- Eliminar tareas
-
-- Mejorar validaciones
-
-- Refactorizar estructura
+Proyecto de aprendizaje backend en Python
