@@ -1,4 +1,4 @@
-from tasks import load_tasks, save_tasks, add_task, list_tasks, upd_task, del_task, complete_task
+from tasks import load_tasks, save_tasks, add_task, list_tasks, upd_task_title, del_task, complete_task
 
 def main():
     tasks = load_tasks()
@@ -35,7 +35,7 @@ def main():
                 continue
 
             try:
-                success = upd_task(tasks, taskID, title)
+                success = upd_task_title(tasks, taskID, title)
                 if success:
                     save_tasks(tasks)
                     print("✅ Tarea modificada correctamente")

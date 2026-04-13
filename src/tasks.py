@@ -40,7 +40,7 @@ def list_tasks(tasks):
         status = "✅" if task["completed"] else "❌"
         print(f'{task["id"]}. {task["title"]} [{status}]')
 
-def upd_task(tasks, taskID, title):
+def upd_task_title(tasks, taskID, title):
     if not os.path.exists(FILE_PATH):
         return []
     
