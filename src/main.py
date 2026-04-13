@@ -1,4 +1,4 @@
-from tasks import load_tasks, save_tasks, add_task, list_tasks, upd_task_title, del_task, complete_task
+from tasks import load_tasks, save_tasks, add_task, list_tasks, update_task_title, delete_task, complete_task
 
 def main():
     tasks = load_tasks()
@@ -28,14 +28,14 @@ def main():
             print("✅ Tarea añadida correctamente")
 
         elif option == "3":
-            taskID = int(input("ID tarea a modificar: "))
             title = input("Nuevo Título: ").strip()
             if not title:
                 print("❌ El título no puede estar vacío")
                 continue
 
             try:
-                success = upd_task_title(tasks, taskID, title)
+                taskID = int(input("ID tarea a modificar: "))
+                success = update_task_title(tasks, taskID, title)
                 if success:
                     save_tasks(tasks)
                     print("✅ Tarea modificada correctamente")
@@ -46,10 +46,9 @@ def main():
                 print("❌ El ID de la tarea debe ser un número entero")
 
         elif option == "4":
-            taskID = int(input("ID tarea a eliminar: "))
-
             try:
-                success = del_task(tasks, taskID)
+                taskID = int(input("ID tarea a eliminar: "))
+                success = delete_task(tasks, taskID)
                 if success:
                     save_tasks(tasks)
                     print("✅ Tarea eliminada correctamente")
@@ -59,9 +58,8 @@ def main():
             except ValueError:
                 print("❌ El ID de la tarea debe ser un número entero")
         elif option == "5":
-            taskID = int(input("ID tarea completada: "))
-
             try:
+                taskID = int(input("ID tarea completada: "))
                 success = complete_task(tasks, taskID)
                 if success:
                     save_tasks(tasks)

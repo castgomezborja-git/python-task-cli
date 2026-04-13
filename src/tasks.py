@@ -40,30 +40,19 @@ def list_tasks(tasks):
         status = "✅" if task["completed"] else "❌"
         print(f'{task["id"]}. {task["title"]} [{status}]')
 
-def upd_task_title(tasks, taskID, title):
-    if not os.path.exists(FILE_PATH):
-        return []
-    
+def update_task_title(tasks, taskID, title):
     for task in tasks:
         if task["id"] == taskID:
             task["title"] = title
             return True
     return False
 
-def del_task(tasks, taskID):
-    if not os.path.exists(FILE_PATH):
-        return []
-    
-    for task in tasks:
-        if task["id"] == taskID:
-            tasks.remove(task)
-            return True
-    return False
+def delete_task(tasks, taskID):
+    initial_len = len(tasks)
+    tasks[:] = [task for task in tasks if task["id"] != taskID]
+    return len(tasks) < initial_len
 
 def complete_task(tasks, taskID):
-    if not os.path.exists(FILE_PATH):
-        return []
-    
     for task in tasks:
         if task["id"] == taskID:
             task["completed"] = True

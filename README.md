@@ -23,6 +23,9 @@ Aplicación de consola desarrollada en Python para gestionar tareas, como parte 
 - Validación de inputs en CLI
 - Organización modular del código
 - Flujo de trabajo con Git y GitHub
+- Gestión de errores con try/except
+- Diseño de funciones con responsabilidades claras
+- Implementación de operaciones seguras sobre listas
 
 ---
 
