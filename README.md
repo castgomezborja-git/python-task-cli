@@ -66,6 +66,8 @@ python src/main.py
 
 ## 📅 Próximos pasos (Semana 2)
 
+- Modificar el nombre de la tarea
+
 - Marcar tareas como completadas
 
 - Eliminar tareas

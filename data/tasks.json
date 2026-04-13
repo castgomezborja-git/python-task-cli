@@ -2,16 +2,21 @@
     {
         "id": 1,
         "title": "Posibilidad de ver tareas",
-        "completed": false
+        "completed": true
     },
     {
         "id": 2,
         "title": "Posibilidad de a\u00f1adir tareas",
-        "completed": false
+        "completed": true
     },
     {
         "id": 3,
-        "title": "Posibilidad de eliminar tareas",
-        "completed": false
+        "title": "Posibilidad de modificar el titulo de la tarea",
+        "completed": true
+    },
+    {
+        "id": 5,
+        "title": "Marcar tarea como completada",
+        "completed": true
     }
 ]
